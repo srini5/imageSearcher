@@ -6,11 +6,6 @@ var request = require("request");
 
 express.get('/api/imagesearch/:searchParam', function(req, res) {
 
-// Call the bing image search API through node - image URLs, ALT text and page URL
-
-//var postUrl = "https://www.microsoft.com/cognitive-services/Demo/BingApisDemo/SearchAsync?path=v5.0/images/search%20&textFormat=html&textdecorations=true&mkt=en-us&safeSearch=Moderate&q="+searchParam;
-
-
 var urlGet = "https://api.cognitive.microsoft.com/bing/v5.0/images/search?q=" + req.params.searchParam;
 
 request({
